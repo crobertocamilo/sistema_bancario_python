@@ -52,12 +52,11 @@ while True:
   '''))
                     if (confirmacao == 1):
                         CLIENTE['saldo'] += valor
-                        CLIENTE['qtd_saques_dia'] += 1
                         os.system('clear')
                         print('Opção selecionada: SIM \n')
                         print(f'Depósito confirmado! \n')
                         print(f'Novo saldo da conta: R$ {CLIENTE["saldo"]:.2f} \n')
-                        extrato.append(f'Depósito......{valor:0.2f}')
+                        extrato.append(f'Depósito........R$  {valor:0.2f}') 
                         break
                     
                     elif (confirmacao == 0):
@@ -91,13 +90,19 @@ while True:
 
   '''))
                     if (confirmacao == 1):
-                        CLIENTE['saldo'] -= valor
-                        
-                        os.system('clear')
-                        print('Opção selecionada: SIM \n')
-                        print(f'Saque efetuado! \n')
-                        print(f'Novo saldo da conta: R$ {CLIENTE["saldo"]:.2f} \n')
-                        extrato.append(f'Saque.........{valor:0.2f}')
+                        if (CLIENTE['qtd_saques_dia'] <= 3):
+
+                            CLIENTE['saldo'] -= valor
+                            CLIENTE['qtd_saques_dia'] += 1
+                            os.system('clear')
+                            print('Opção selecionada: SIM \n')
+                            print(f'Saque efetuado! \n')
+                            print(f'Novo saldo da conta: R$ {CLIENTE["saldo"]:.2f} \n')
+                            extrato.append(f'Saque...........R$  {valor:0.2f}')
+                        else:
+                            print(f'Limite de saque diário ({CLIENTE["qtd_saques_dia"]}) excedido!')
+                            print('Não é possível fazer a operação! Por favor, tente novamente amanhã.')
+                            
                         break
                     
                     elif (confirmacao == 0):
@@ -111,13 +116,15 @@ while True:
 
     if opcao == 3:
         print('Opção selecionada: EXTRATO \n')
+        print('=== Extrato da Sessão ===\n')
         for item in range(len(extrato)):
             print(extrato[item])
-        print(f'Saldo atual: R$ {CLIENTE["saldo"]:0.2f}\n\n\n')
+        print(f'Saldo atual:    R$ {CLIENTE["saldo"]:0.2f}\n')
+        print('=========================\n\n')
 
     if opcao == 0:
         print('\nAgradecemos por utilizar os nossos serviços! Tenha um bom dia! \n')
-        print('=== Sessão Encerrada=== = \n')
+        print('=== Sessão Encerrada === = \n')
         break
 
     print('\nDeseja realizar outra operação?\n')
