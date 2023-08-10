@@ -30,24 +30,26 @@ O [código](https://github.com/crobertocamilo/sistema_bancario_python/blob/main/
 
 Será exibido o menu de operações e o usuário deve escolher uma das opções:
 <div align="center">
-  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/menu.png?raw=true" alt="Menu de operações" width=40%/>
+  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/menu.png?raw=true" alt="Menu de operações" width=35%/>
 </div>
 
 Foi aplicada validação à todas as entradas de dados (*inputs*) utilizando **try... except**.
 
 <br>
+
 As operações de depósito e saque implementam as regras definidas nas *instruções* e solicitam a confirmação do usário para concluir a operação:
 
 <br>
 <div align="center">
-  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/validacao.png?raw=true" alt="Exemplo confirmação saque" width=60%/>
+  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/validacao.png?raw=true" alt="Exemplo confirmação saque" width=55%/>
 </div>
 
 <br>
+
 A opção de extrato pode ser selecionada a qualquer momento (e várias vezes durante a seção) e exibe toda a movimentação financeira da conta:
 
 <br>
 <div align="center">
-  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/extrato.png?raw=true" alt="Exemplo extrato" width=35%/>
+  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/extrato.png?raw=true" alt="Exemplo extrato" width=30%/>
 </div>
 
