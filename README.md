@@ -15,11 +15,11 @@ Desenvolver uma aplicação simples que implemente as principais operações ban
 
 **Observações:**
 
-- O sistema de exibir um menu com as operações. O usuário deve poder fazer diversas operações, respeitando as instruções abaixo;
+- O sistema deve exibir um menu com as operações. O usuário deve poder fazer diversas operações, respeitando as instruções abaixo;
 - Considerar que o usário já fez o *login* no sistema (não é necessário se preocupar com as informações do cliente: nome, conta, agência já foram validados);
 - Deve ser possível depositar valores positivos (sem limite de valor ou número de operações);
 - O sistema deve permitir até 3 saques por dia, sendo o valor máximo para cada saque R$ 500. Se o usário não tiver saldo suficiente na conta, não permitir o saque;
-- A opção extrato deve listar todas as operações de depósito e saque realizadas durante a seção, além do saldo da conta. O extrato pode ser solicitado a qualquer momento e deve considerar as operações realizada até então - caso nenhuma operação tenha sido realizada ainda, exibir a mensagem *Não foram realizadas movimentações*.
+- A opção extrato deve listar todas as operações de depósito e saque realizadas durante a seção, além do saldo da conta. O extrato pode ser solicitado a qualquer momento e deve considerar as operações realizadas até então - caso nenhuma operação tenha sido realizada ainda, exibir a mensagem *Não foram realizadas movimentações*.
 
 ---
 ### Implementando a solução:
@@ -28,20 +28,22 @@ O [código](https://github.com/crobertocamilo/sistema_bancario_python/blob/main/
 
 `python codigo.py` ou `python3 codigo.py`
 
+<br>
 Será exibido o menu de operações e o usuário deve escolher uma das opções:
 <div align="center">
   <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/menu.png?raw=true" alt="Menu de operações" width=35%/>
 </div>
 
+<br>
 Foi aplicada validação à todas as entradas de dados (*inputs*) utilizando **try... except**.
 
 <br>
 
-As operações de depósito e saque implementam as regras definidas nas *instruções* e solicitam a confirmação do usário para concluir a operação:
+As operações de depósito e saque implementam as regras definidas nas *instruções* e solicitam a confirmação do usário para concluir a transação:
 
 <br>
 <div align="center">
-  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/validacao.png?raw=true" alt="Exemplo confirmação saque" width=55%/>
+  <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/validacao.png?raw=true" alt="Exemplo confirmação saque" width=52%/>
 </div>
 
 <br>
