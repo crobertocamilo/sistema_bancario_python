@@ -5,7 +5,7 @@ CLIENTE = {
     'nome': 'Arthur',
     'agencia': 1234,
     'conta': '0001-1',
-    'saldo': 400,
+    'saldo': 1400,
     'limite_diario_saques': 3,
     'limite_valor_por_saque': 500,
     'qtd_saques_dia': 0,
@@ -13,8 +13,11 @@ CLIENTE = {
 }
 
 extrato = [f'Saldo anterior: R$ {CLIENTE["saldo"]:0.2f}']
+
+#Limpa a tela do terminal
 os.system('clear')
 
+#O menu deve ser exibido até que o usuário digite 0 (zero)
 while True:
         
     print('''
@@ -83,7 +86,7 @@ while True:
                 if valor <= 0:
                     print('Valor de saque inválido! \n')
                     continue
-                elif valor > 500:
+                elif valor > CLIENTE['limite_valor_por_saque']:
                     print('Valor inválido! O limite de saque por operação é de R$ 500 \n')
                     continue            
                 else:
@@ -125,9 +128,16 @@ while True:
     if opcao == 3:
         print('Opção selecionada: EXTRATO \n')
         print('==== Extrato da Sessão ====\n')
-        for item in range(len(extrato)):
-            print(extrato[item])
-        print(f'Saldo atual:    R$ {CLIENTE["saldo"]:0.2f}\n')
+
+        #Houve alguma movientação durante a seção?
+        if len(extrato) == 1:
+            print(extrato[0])
+            print('Não foram realizadas movimentações.')
+        
+        else:
+            for item in range(len(extrato)):
+                print(extrato[item])
+            print(f'Saldo atual:    R$ {CLIENTE["saldo"]:0.2f}\n')
         print('===========================\n\n')
 
     if opcao == 0:
