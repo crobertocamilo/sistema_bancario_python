@@ -29,12 +29,14 @@ O [código](https://github.com/crobertocamilo/sistema_bancario_python/blob/main/
 `python codigo.py` ou `python3 codigo.py`
 
 <br>
+
 Será exibido o menu de operações e o usuário deve escolher uma das opções:
 <div align="center">
   <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/menu.png?raw=true" alt="Menu de operações" width=35%/>
 </div>
 
 <br>
+
 Foi aplicada validação à todas as entradas de dados (*inputs*) utilizando **try... except**.
 
 <br>
@@ -51,6 +53,7 @@ As operações de depósito e saque implementam as regras definidas nas *instru�
 A opção de extrato pode ser selecionada a qualquer momento (e várias vezes durante a seção) e exibe toda a movimentação financeira da conta:
 
 <br>
+
 <div align="center">
   <img src="https://github.com/crobertocamilo/sistema_bancario_python/blob/main/assets/extrato.png?raw=true" alt="Exemplo extrato" width=30%/>
 </div>
